@@ -20,11 +20,12 @@ export function Player() {
 
   return (
     <motion.div
+      color={'white'}
       initial={{scale: 0}}
       animate={{
         x: provider.isAttacking ? 200 : 0,
         scale: 1,
-        color: provider.isAttacking ? 'rgb(255,0,0)' : 'rgb(0,0,0)',
+        color: provider.isAttacking ? 'red' : 'white',
       }}
       transition={{
         type: 'spring',

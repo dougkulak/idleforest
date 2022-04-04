@@ -7,15 +7,21 @@ import {GameProvider} from './GameProvider';
 import './index.css';
 import {PlayerProvider} from './PlayerProvider';
 
-const colors = {
-  brand: {
-    900: '#1a365d',
-    800: '#153e75',
-    700: '#2a69ac',
+const themeConfig = {
+  config: {
+    useSystemColorMode: false,
+    initialColorMode: 'dark',
+  },
+  styles: {
+    global: {
+      body: {
+        bg: 'black',
+      },
+    },
   },
 };
 
-const theme = extendTheme({colors});
+const theme = extendTheme(themeConfig);
 
 const container = document.getElementById('root');
 const root = createRoot(container);

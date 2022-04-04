@@ -1,15 +1,16 @@
 import './App.css';
-import {Container, Divider, Heading, HStack} from '@chakra-ui/react';
+import {Container, Divider, HStack} from '@chakra-ui/react';
 import {TimeElapsed} from './components/TimeElapsed';
 import {Player} from './components/Player';
 import {Enemy} from './components/Enemy';
 import {Controls} from './components/Controls';
+import {Logo} from './components/Logo';
 
 function App() {
   return (
     <div className="App">
       <Container>
-        <Heading>Idle Forest</Heading>
+        <Logo />
         <TimeElapsed />
         <Divider m={2} />
         <HStack spacing={2} justifyContent={'space-between'}>
