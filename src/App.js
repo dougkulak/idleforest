@@ -1,18 +1,13 @@
 import './App.css';
-import Header from './components/Header';
-import Workers from './components/Workers';
-import {GameProvider} from './GameProvider';
-import Resources from './components/Resources';
+import {Container, Text} from '@chakra-ui/react';
 
 function App() {
   return (
-    <GameProvider>
-      <div className="App">
-        <Header />
-        <Resources />
-        <Workers />
-      </div>
-    </GameProvider>
+    <div className="App">
+      <Container>
+        <Text>Hello</Text>
+      </Container>
+    </div>
   );
 }
 
