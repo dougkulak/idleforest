@@ -5,6 +5,7 @@ import App from './App';
 import {GameProvider} from './GameProvider';
 
 import './index.css';
+import {PlayerProvider} from './PlayerProvider';
 
 const colors = {
   brand: {
@@ -23,7 +24,9 @@ root.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
       <GameProvider>
-        <App />
+        <PlayerProvider>
+          <App />
+        </PlayerProvider>
       </GameProvider>
     </ChakraProvider>
   </React.StrictMode>
