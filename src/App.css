@@ -5,3 +5,14 @@ body {
 .App {
     text-align: center;
 }
+
+.BattleScene {
+    background-image: url('./bg/forest.jpg');
+    background-size: cover;
+    background-position: bottom;
+    min-height: 300px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    width: 100%;
+}

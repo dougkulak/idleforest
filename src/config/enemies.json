@@ -1,0 +1,30 @@
+[
+  {
+    "level": 1,
+    "name": "cute rabbit",
+    "hp": 100,
+    "dmg": "2d2",
+    "ascii": "rabbit.txt"
+  },
+  {
+    "level": 1,
+    "name": "small frog",
+    "hp": 120,
+    "dmg": "2d2",
+    "ascii": "frog.txt"
+  },
+  {
+    "level": 1,
+    "name": "tiny turtle",
+    "hp": 100,
+    "dmg": "1d4",
+    "ascii": "turtle.txt"
+  },
+  {
+    "level": 2,
+    "name": "spooked spider",
+    "hp": 150,
+    "dmg": "3d2",
+    "ascii": "spider.txt"
+  }
+]

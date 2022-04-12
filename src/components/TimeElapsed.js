@@ -5,5 +5,5 @@ import {formatTimeElapsed} from '../utils/time';
 export function TimeElapsed() {
   const game = useGame();
 
-  return <Text>{formatTimeElapsed(game.timeElapsed)}</Text>;
+  return <Text>Time: {formatTimeElapsed(game.timeElapsed)}</Text>;
 }

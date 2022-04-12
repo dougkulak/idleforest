@@ -1,5 +1,5 @@
 <div align="center">
-  <h1 align="center">Idle Forest</h1>
+  <h1 align="center">Idle Night</h1>
   <p align="center">
 by Kulak Games
   </p>

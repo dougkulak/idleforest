@@ -1,15 +1,19 @@
 import {Button, HStack} from '@chakra-ui/react';
-import {usePlayer} from '../PlayerProvider';
+import {useCombat} from '../CombatProvider';
 
 export function Controls() {
-  const player = usePlayer();
+  const combat = useCombat();
 
   return (
     <HStack justifyContent={'center'}>
-      <Button onClick={player.attack} colorScheme={'red'}>
+      <Button onClick={combat.playerAttack} colorScheme={'red'}>
         Attack
       </Button>
       <Button colorScheme={'yellow'}>Defend</Button>
+      <Button onClick={combat.openBattle}>Open Battle</Button>
+      <Button onClick={combat.closeBattle}>Close Battle</Button>
+      <Button onClick={combat.openWorld}>Open World</Button>
+      <Button onClick={combat.closeWorld}>Close World</Button>
     </HStack>
   );
 }

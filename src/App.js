@@ -1,24 +1,32 @@
 import './App.css';
-import {Container, Divider, HStack} from '@chakra-ui/react';
+import {Center, Container, Divider, HStack} from '@chakra-ui/react';
 import {TimeElapsed} from './components/TimeElapsed';
-import {Player} from './components/Player';
-import {Enemy} from './components/Enemy';
-import {Controls} from './components/Controls';
 import {Logo} from './components/Logo';
+import {WorldMap} from './components/WorldMap';
+import {BattleScene} from './BattleScene';
+import {Resources} from './components/Resources';
+import {PlayerStatusBar} from './components/PlayerStatusBar';
+import {DeathScene} from './components/DeathScene';
 
 function App() {
   return (
     <div className="App">
-      <Container>
+      <Container maxW="3xl">
         <Logo />
-        <TimeElapsed />
-        <Divider m={2} />
-        <HStack spacing={2} justifyContent={'space-between'}>
-          <Player />
-          <Enemy />
-        </HStack>
-        <Divider m={2} />
-        <Controls />
+        <Center>
+          <HStack spacing={5}>
+            <Resources />
+            <TimeElapsed />
+          </HStack>
+        </Center>
+        <Divider mt={2} mb={2} />
+        <BattleScene />
+        {/*<Divider m={2} />*/}
+        {/*<Controls />*/}
+        <WorldMap />
+        <DeathScene />
+        <Divider mt={2} mb={2} />
+        <PlayerStatusBar />
       </Container>
     </div>
   );
