@@ -6,6 +6,8 @@ import {GameProvider} from './GameProvider';
 
 import './index.css';
 import {CombatProvider} from './CombatProvider';
+import {MapProvider} from './providers/MapProvider';
+import {MessageProvider} from './providers/MessageProvider';
 
 const themeConfig = {
   config: {
@@ -68,9 +70,13 @@ root.render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
       <GameProvider>
-        <CombatProvider>
-          <App />
-        </CombatProvider>
+        <MessageProvider>
+          <CombatProvider>
+            <MapProvider>
+              <App />
+            </MapProvider>
+          </CombatProvider>
+        </MessageProvider>
       </GameProvider>
     </ChakraProvider>
   </React.StrictMode>

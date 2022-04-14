@@ -17,11 +17,11 @@ const xpToLevel = [
 const defaultPlayer = {
   level: 1,
   name: 'player',
-  hp: 50,
-  maxHp: 50,
+  hp: 100,
+  maxHp: 100,
   mp: 25,
   maxMp: 25,
-  dmg: '1d6',
+  dmg: '6d6',
   xp: 0,
   maxXp: 10,
 };
@@ -56,6 +56,8 @@ export const CombatProvider = ({children}) => {
   const [enemyDead, setEnemyDead] = useState(false);
   const [enemyAscii, setEnemyAscii] = useState(null);
 
+  const [onEnemyDied, setOnEnemyDied] = useState(() => {});
+
   const [playerIsAttacking, setPlayerIsAttacking] = useState(false);
   const [enemyIsAttacking, setEnemyIsAttacking] = useState(false);
   const [playerRecentDamageTaken, setPlayerRecentDamageTaken] = useState(0);
@@ -70,6 +72,13 @@ export const CombatProvider = ({children}) => {
   const [enemyHealthColor, setEnemyHealthColor] = useState(
     config.defaultHealthColor
   );
+
+  const doEncounter = (whenEnemyDies = () => {}) => {
+    setOnEnemyDied(() => whenEnemyDies);
+    openBattle();
+    closeWorld();
+    nextEnemy();
+  };
 
   const doPlayerLeveled = useCallback(() => {
     setPlayer((prevState) => {
@@ -108,13 +117,17 @@ export const CombatProvider = ({children}) => {
     setTimeout(() => {
       closeBattle();
       openWorld();
+      if (typeof onEnemyDied === 'function') {
+        onEnemyDied();
+        console.log('onEnmeyDied()');
+      }
     }, 100);
 
     // setTimeout(() => {
     //   setEnemyDead(false);
     //   nextEnemy();
     // }, config.enemyAutoAttackEvery);
-  }, []);
+  }, [onEnemyDied]);
 
   const doPlayerDied = useCallback(() => {
     setPlayerDead(true);
@@ -281,6 +294,7 @@ export const CombatProvider = ({children}) => {
         closeWorld,
         nextEnemy,
         doPlayAgain,
+        doEncounter,
       }}>
       {children}
     </CombatContext.Provider>

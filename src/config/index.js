@@ -10,4 +10,12 @@ export const config = {
   startWood: 30,
   startRocks: 30,
   startGold: 300,
+  viewportWidth: 26,
+  viewportHeight: 22,
+  minViewportWidth: 14,
+  minViewportHeight: 10,
+  iconWidth: 16,
+  iconHeight: 16,
+  startPositionX: 108,
+  startPositionY: 128,
 };

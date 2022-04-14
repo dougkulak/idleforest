@@ -1,7 +1,7 @@
 import {Box, Collapse, HStack} from '@chakra-ui/react';
-import {Player} from './components/Player';
-import {Enemy} from './components/Enemy';
-import {useCombat} from './CombatProvider';
+import {Player} from './Player';
+import {Enemy} from './Enemy';
+import {useCombat} from '../CombatProvider';
 
 export function BattleScene() {
   const combat = useCombat();
@@ -23,6 +23,7 @@ export function BattleScene() {
               style={{
                 width: '100%',
               }}>
+              `
               <Player />
               <Enemy />
             </HStack>

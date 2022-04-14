@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useCombat} from '../CombatProvider';
-import {Box, Button, Center, VStack} from '@chakra-ui/react';
+import {Button, VStack} from '@chakra-ui/react';
 import image from '../you-died.svg';
 import rawFile from '../ascii/death.txt';
 

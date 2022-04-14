@@ -1,12 +1,17 @@
 import './App.css';
-import {Center, Container, Divider, HStack} from '@chakra-ui/react';
+import {Box, Center, Container, Divider, HStack} from '@chakra-ui/react';
 import {TimeElapsed} from './components/TimeElapsed';
 import {Logo} from './components/Logo';
 import {WorldMap} from './components/WorldMap';
-import {BattleScene} from './BattleScene';
+import {BattleScene} from './components/BattleScene';
+import {DungeonScene} from './components/DungeonScene';
 import {Resources} from './components/Resources';
 import {PlayerStatusBar} from './components/PlayerStatusBar';
 import {DeathScene} from './components/DeathScene';
+import {ImageMap} from './components/ImageMap';
+import {MapToolbar} from './components/MapToolbar';
+import {MessageFeed} from './components/MessageFeed';
+import {Controls} from './components/Controls';
 
 function App() {
   return (
@@ -20,13 +25,23 @@ function App() {
           </HStack>
         </Center>
         <Divider mt={2} mb={2} />
-        <BattleScene />
         {/*<Divider m={2} />*/}
-        {/*<Controls />*/}
-        <WorldMap />
-        <DeathScene />
+        <Controls />
+        <DungeonScene />
+        <BattleScene />
         <Divider mt={2} mb={2} />
-        <PlayerStatusBar />
+
+        <HStack alignItems={'flex-start'}>
+          <Box w={'100%'} bg={'#000'} p={1}>
+            <PlayerStatusBar />
+            <MessageFeed />
+          </Box>
+          <ImageMap />
+        </HStack>
+
+        <MapToolbar />
+        {/*<WorldMap />*/}
+        <DeathScene />
       </Container>
     </div>
   );

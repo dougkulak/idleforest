@@ -1,15 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {
-  Box,
-  Button,
-  Grid,
-  GridItem,
-  HStack,
-  Progress,
-  StackDivider,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import {Box, Button, HStack, Progress, Text, VStack} from '@chakra-ui/react';
 import {useCombat} from '../CombatProvider';
 import portraitAscii from '../ascii/portrait.txt';
 import {MessageFeed} from './MessageFeed';
@@ -48,7 +38,6 @@ export function PlayerStatusBar() {
               </Text>
             </VStack>
           </Box>
-
           <Box w={'100%'} bg={'#000'} p={1}>
             <HStack spacing={1} mb={1}>
               {combat.isWorldOpen && (
@@ -101,7 +90,7 @@ export function PlayerStatusBar() {
                     min={0}
                     max={combat.player.maxXp}
                     value={combat.player.xp}
-                    height={'8px'}
+                    height={'7px'}
                     width={'100%'}
                     colorScheme={'purple'}
                   />
@@ -109,9 +98,7 @@ export function PlayerStatusBar() {
               </Box>
             </HStack>
           </Box>
-          <Box w={'100%'} bg={'#000'} p={1}>
-            <MessageFeed />
-          </Box>
+          d
         </HStack>
       </Box>
     </>

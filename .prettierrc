@@ -6,5 +6,6 @@
   "proseWrap": "never",
   "singleQuote": true,
   "semi": true,
+  "endOfLine": "auto",
   "trailingComma": "es5"
 }
