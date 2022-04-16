@@ -89,67 +89,86 @@ export const getHealthLevelByPercent = (pct) => {
 };
 
 export const getDamageLevelByAmount = (amt) => {
-  let level = 'Barely Touch';
-
+  let level = 'barely touch';
+  let levels = 'barely touches';
   if (amt >= 3) {
-    level = 'Scratch';
+    level = 'scratch';
+    levels = 'scratches';
   }
   if (amt >= 4) {
-    level = 'Bruise';
+    level = 'bruise';
+    levels = 'bruises';
   }
   if (amt >= 5) {
-    level = 'Hit';
+    level = 'hit';
+    levels = 'hits';
   }
   if (amt >= 6) {
-    level = 'Injure';
+    level = 'injure';
+    levels = 'injures';
   }
   if (amt >= 8) {
-    level = 'Wound';
+    level = 'wound';
+    levels = 'wounds';
   }
   if (amt >= 10) {
-    level = 'Draw Blood From';
+    level = 'draw blood from';
+    levels = 'draws blood from';
   }
   if (amt >= 12) {
-    level = 'Smite';
+    level = 'smite';
+    levels = 'smites';
   }
   if (amt >= 15) {
-    level = 'Massacre';
+    level = 'massacre';
+    levels = 'massacres';
   }
   if (amt >= 21) {
-    level = 'Decimate';
+    level = 'decimate';
+    levels = 'decimates';
   }
   if (amt >= 26) {
-    level = 'Devastate';
+    level = 'devastate';
+    levels = 'devastates';
   }
   if (amt >= 31) {
-    level = 'Maim';
+    level = 'maim';
+    levels = 'maims';
   }
   if (amt >= 41) {
-    level = 'Mutilate';
+    level = 'mutilate';
+    levels = 'mutilates';
   }
   if (amt >= 51) {
-    level = 'Pulverise';
+    level = 'pulverise';
+    levels = 'pulverises';
   }
   if (amt >= 61) {
-    level = 'Demolish';
+    level = 'demolish';
+    levels = 'demolishes';
   }
   if (amt >= 71) {
-    level = 'Mangle';
+    level = 'mangle';
+    levels = 'mangles';
   }
   if (amt >= 81) {
-    level = 'Obliterate';
+    level = 'obliterate';
+    levels = 'obliterates';
   }
   if (amt >= 91) {
-    level = 'Annihilate';
+    level = 'annihilate';
+    levels = 'annihilates';
   }
   if (amt >= 101) {
-    level = 'Horribly Maim';
+    level = 'horribly maim';
+    levels = 'horribly maims';
   }
   if (amt >= 131) {
-    level = 'Viciously Rend';
+    level = 'viciously rend';
+    levels = 'viciously rends';
   }
 
-  return level;
+  return [level, levels];
 };
 
 export const PlayerAttackTypes = {
@@ -392,7 +411,9 @@ export const CombatProvider = ({children}) => {
     });
 
     message.addMessage(
-      `You ${getDamageLevelByAmount(dmg)} ${enemy.name} for ${dmg}`,
+      `You ${
+        getDamageLevelByAmount(dmg)[0]
+      } ${enemy.name.toLowerCase()} for ${dmg}`,
       null,
       null,
       'green.300'
@@ -415,7 +436,7 @@ export const CombatProvider = ({children}) => {
     });
 
     message.addMessage(
-      `${enemy.name} ${getDamageLevelByAmount(dmg)} you for ${dmg}`,
+      `${enemy.name} ${getDamageLevelByAmount(dmg)[1]} you for ${dmg}`,
       null,
       null,
       'yellow.300'

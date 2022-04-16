@@ -1,6 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {config} from '../config';
-import rawFile from '../ascii/intro.txt';
+import React, {useContext, useState} from 'react';
 
 export const MessageContext = React.createContext();
 export const useMessage = () => useContext(MessageContext);

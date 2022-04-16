@@ -37,6 +37,8 @@ export const MapProvider = ({children}) => {
       const isMountain =
         room.rgba === 'rgba(170, 196, 178, 1)' ||
         room.rgba === 'rgba(128, 151, 156, 1)';
+      const isCastle = room.rgba === 'rgba(198, 227, 255, 1)';
+      const isCave = room.rgba === 'rgba(111, 128, 132, 1)';
 
       if (isWater) {
         room.name = 'A Deep Ocean';
@@ -58,6 +60,14 @@ export const MapProvider = ({children}) => {
       }
       if (isMountain) {
         room.name = 'A Steep Mountain';
+        msgColor = 'gray.400';
+      }
+      if (isCastle) {
+        room.name = 'A Glorious Castle';
+        msgColor = 'gray.400';
+      }
+      if (isCave) {
+        room.name = 'A Mysterious Cave';
         msgColor = 'gray.400';
       }
       msgColor = room.rgba;

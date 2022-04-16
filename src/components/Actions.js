@@ -22,12 +22,6 @@ function Actions() {
               <Button size={'xs'} onClick={world.onBuild}>
                 (B)uild
               </Button>
-              <Button size={'xs'} onClick={world.onHeal}>
-                (H)eal
-              </Button>
-              <Button size={'xs'} onClick={world.onMana}>
-                (M)ana
-              </Button>
             </>
           )}
           {combat.isBattleOpen && (
@@ -40,12 +34,6 @@ function Actions() {
               </Button>
               <Button size={'xs'} onClick={combat.doLeap}>
                 (L)eap
-              </Button>
-              <Button size={'xs'} onClick={combat.doHeal}>
-                (H)eal
-              </Button>
-              <Button size={'xs'} onClick={combat.doMana}>
-                (M)ana
               </Button>
             </>
           )}

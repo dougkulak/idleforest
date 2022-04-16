@@ -1,5 +1,6 @@
 import React from 'react';
 import {config} from '../config';
+import {CastleIcon} from './Icons';
 
 export const PlayerIcon = (
   <svg
@@ -70,6 +71,8 @@ export function Room({x, y, rgba, vpH, vpW}) {
   const isForest2 = rgba === 'rgba(144, 255, 79, 1)';
   const isMountain =
     rgba === 'rgba(170, 196, 178, 1)' || rgba === 'rgba(128, 151, 156, 1)';
+  const isCastle = rgba === 'rgba(198, 227, 255, 1)';
+  const isCave = rgba === 'rgba(111, 128, 132, 1)';
   const isPlayer = x === Math.floor(vpW / 2) && y === Math.floor(vpH / 2);
 
   let char = '░';
@@ -78,6 +81,8 @@ export function Room({x, y, rgba, vpH, vpW}) {
   if (isMountain) char = MountainIcon;
   if (isForest) char = TreeIcon;
   if (isForest2) char = TreeIcon;
+  if (isCastle) char = CastleIcon;
+  if (isCave) char = '@';
   if (isPlayer) char = PlayerIcon;
 
   return (
