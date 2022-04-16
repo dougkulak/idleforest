@@ -59,10 +59,15 @@ export function Enemy() {
             </Text>
           </motion.div>
         )}
-        <Text textAlign={'center'}>{combat.enemy.name}</Text>
-        <pre style={{textAlign: 'left', display: 'inline-block'}}>
+        <pre
+          style={{
+            fontSize: 'xx-small',
+            textAlign: 'left',
+            display: 'inline-block',
+          }}>
           {combat.enemyAscii}
         </pre>
+        <Text textAlign={'center'}>{combat.enemy.name}</Text>
         <Progress
           min={0}
           max={combat.enemy.maxHp}

@@ -1,5 +1,6 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {config} from '../config';
+import rawFile from '../ascii/intro.txt';
 
 export const MessageContext = React.createContext();
 export const useMessage = () => useContext(MessageContext);
@@ -25,7 +26,7 @@ const defaultMessages = [
   },
   {
     type: 'info',
-    message: 'Faint screams can be heard from a nearby cave.',
+    message: 'Faint screams come from a cave to the north.',
     time: new Date(),
     color: 'red.500',
   },
@@ -43,7 +44,7 @@ export const MessageProvider = ({children}) => {
     setMessages((prevState) => {
       let newState = [...prevState];
       newState.push({message, type, time, color});
-      if (newState.length > 10) newState.shift();
+      if (newState.length > 23) newState.shift();
       return newState;
     });
   }

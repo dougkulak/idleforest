@@ -1,7 +1,9 @@
 import {Box, Progress, Text} from '@chakra-ui/react';
 import raw from '../ascii/player.txt';
+import rawJab from '../ascii/playerJab.txt';
+import rawKick from '../ascii/playerKick.txt';
 import React, {useEffect, useState} from 'react';
-import {useCombat} from '../CombatProvider';
+import {PlayerAttackTypes, useCombat} from '../CombatProvider';
 import {motion} from 'framer-motion';
 import {config} from '../config';
 
@@ -28,6 +30,21 @@ export function Player() {
         setPlayerAscii(text);
       });
   }, []);
+
+  useEffect(() => {
+    let src = raw;
+    if (combat.playerAttackType === PlayerAttackTypes.JAB) {
+      src = rawJab;
+    }
+    if (combat.playerAttackType === PlayerAttackTypes.KICK) {
+      src = rawKick;
+    }
+    fetch(src)
+      .then((r) => r.text())
+      .then((text) => {
+        setPlayerAscii(text);
+      });
+  }, [combat.playerAttackType]);
 
   if (!playerAscii) return <></>;
 
@@ -69,10 +86,15 @@ export function Player() {
             </Text>
           </motion.div>
         )}
-        <Text textAlign={'center'}>{combat.player.name}</Text>
-        <pre style={{textAlign: 'left', display: 'inline-block'}}>
+        <pre
+          style={{
+            textAlign: 'left',
+            display: 'inline-block',
+            fontSize: 'xx-small',
+          }}>
           {playerAscii}
         </pre>
+        <Text textAlign={'center'}>{combat.player.name}</Text>
         <Progress
           min={0}
           max={combat.player.maxHp}

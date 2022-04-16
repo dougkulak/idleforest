@@ -18,7 +18,7 @@ export const MapProvider = ({children}) => {
 
   useEffect(() => {
     let room = {
-      name: 'the void',
+      name: null,
     };
 
     let msgColor = 'grey.200';
@@ -64,12 +64,17 @@ export const MapProvider = ({children}) => {
     }
 
     if (!room.name) room.name = 'An Interesting Place';
+
+    setCurrentRoom(room);
+
     message.addMessage(
       `[${combat.player.hp}/${combat.player.maxHp}hp] ${room.name}`,
       'info',
       new Date(),
       msgColor
     );
+
+    console.log('--', posX, posY);
   }, [posX, posY]);
 
   return (

@@ -150,15 +150,64 @@ export const ResourceWoodIcon = () => (
       width: 16,
       height: 16,
       display: 'inline-block',
-      verticalAlign: 'middle',
+      verticalAlign: 'top',
     }}
-    width="20"
-    height="20"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 320 512">
     <path
       fill="#008000"
       d="M413.8 447.1L256 448l0 31.99C256 497.7 241.8 512 224.1 512c-17.67 0-32.1-14.32-32.1-31.99l0-31.99l-158.9-.0099c-28.5 0-43.69-34.49-24.69-56.4l68.98-79.59H62.22c-25.41 0-39.15-29.8-22.67-49.13l60.41-70.85H89.21c-21.28 0-32.87-22.5-19.28-37.31l134.8-146.5c10.4-11.3 28.22-11.3 38.62-.0033l134.9 146.5c13.62 14.81 2.001 37.31-19.28 37.31h-10.77l60.35 70.86c16.46 19.34 2.716 49.12-22.68 49.12h-15.2l68.98 79.59C458.7 413.7 443.1 447.1 413.8 447.1z"
+    />
+  </svg>
+);
+
+export const ResourceTimeIcon = () => (
+  <svg
+    style={{
+      width: 14,
+      height: 20,
+      display: 'inline-block',
+      verticalAlign: 'top',
+    }}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512">
+    <path
+      fill="#74c0fc"
+      d="M256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512zM232 256C232 264 236 271.5 242.7 275.1L338.7 339.1C349.7 347.3 364.6 344.3 371.1 333.3C379.3 322.3 376.3 307.4 365.3 300L280 243.2V120C280 106.7 269.3 96 255.1 96C242.7 96 231.1 106.7 231.1 120L232 256z"
+    />
+  </svg>
+);
+
+export const HealthPotionIcon = () => (
+  <svg
+    style={{
+      width: 14,
+      height: 20,
+      display: 'inline-block',
+      verticalAlign: 'top',
+    }}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 448 512">
+    <path
+      fill="#E53E3E"
+      d="M437.2 403.5L319.1 215L319.1 64h7.1c13.25 0 23.1-10.75 23.1-24l-.0002-16c0-13.25-10.75-24-23.1-24H120C106.8 0 96.01 10.75 96.01 24l-.0002 16c0 13.25 10.75 24 23.1 24h7.1L128 215l-117.2 188.5C-18.48 450.6 15.27 512 70.89 512h306.2C432.7 512 466.5 450.5 437.2 403.5zM137.1 320l48.15-77.63C189.8 237.3 191.9 230.8 191.9 224l.0651-160h63.99l-.06 160c0 6.875 2.25 13.25 5.875 18.38L309.9 320H137.1z"
+    />
+  </svg>
+);
+
+export const ManaPotionIcon = () => (
+  <svg
+    style={{
+      width: 14,
+      height: 20,
+      display: 'inline-block',
+      verticalAlign: 'top',
+    }}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 448 512">
+    <path
+      fill="#006aff"
+      d="M437.2 403.5L319.1 215L319.1 64h7.1c13.25 0 23.1-10.75 23.1-24l-.0002-16c0-13.25-10.75-24-23.1-24H120C106.8 0 96.01 10.75 96.01 24l-.0002 16c0 13.25 10.75 24 23.1 24h7.1L128 215l-117.2 188.5C-18.48 450.6 15.27 512 70.89 512h306.2C432.7 512 466.5 450.5 437.2 403.5zM137.1 320l48.15-77.63C189.8 237.3 191.9 230.8 191.9 224l.0651-160h63.99l-.06 160c0 6.875 2.25 13.25 5.875 18.38L309.9 320H137.1z"
     />
   </svg>
 );
@@ -227,12 +276,10 @@ export const ResourceRocksIcon = () => (
   <svg
     style={{
       width: 16,
-      height: 16,
+      height: 20,
       display: 'inline-block',
-      verticalAlign: 'middle',
+      verticalAlign: 'top',
     }}
-    width="20"
-    height="20"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 576 512">
     <path
@@ -256,7 +303,7 @@ export const PlayerIcon = (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 320 512">
     <path
-      fill="#FF0000"
+      fill="#E53E3E"
       d="M208 48C208 74.51 186.5 96 160 96C133.5 96 112 74.51 112 48C112 21.49 133.5 0 160 0C186.5 0 208 21.49 208 48zM152 352V480C152 497.7 137.7 512 120 512C102.3 512 88 497.7 88 480V256.9L59.43 304.5C50.33 319.6 30.67 324.5 15.52 315.4C.3696 306.3-4.531 286.7 4.573 271.5L62.85 174.6C80.2 145.7 111.4 128 145.1 128H174.9C208.6 128 239.8 145.7 257.2 174.6L315.4 271.5C324.5 286.7 319.6 306.3 304.5 315.4C289.3 324.5 269.7 319.6 260.6 304.5L232 256.9V480C232 497.7 217.7 512 200 512C182.3 512 168 497.7 168 480V352L152 352z"
     />
   </svg>
@@ -347,13 +394,11 @@ export const GoldIcon = (
 export const ResourceGoldIcon = () => (
   <svg
     style={{
-      width: 16,
-      height: 16,
+      width: 14,
+      height: 20,
       display: 'inline-block',
-      verticalAlign: 'middle',
+      verticalAlign: 'top',
     }}
-    width="20"
-    height="20"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 512 512">
     <path

@@ -59,6 +59,16 @@ const themeConfig = {
       900: '#B794F4',
     },
   },
+  components: {
+    Text: {
+      variants: {
+        heading: {
+          fontFamily: "'Merriweather', serif",
+          fontWeight: 900,
+        },
+      },
+    },
+  },
 };
 
 const theme = extendTheme(themeConfig);

@@ -8,7 +8,7 @@ import {useMap} from '../providers/MapProvider';
 import {Box, Collapse} from '@chakra-ui/react';
 import {useMessage} from '../providers/MessageProvider';
 
-export function ImageMap() {
+export function FastMap() {
   const map = useMap();
   const combat = useCombat();
   const message = useMessage();
@@ -136,7 +136,11 @@ export function ImageMap() {
 
   return (
     <Collapse in={combat.isWorldOpen} animateOpacity>
-      <Box borderColor={'#222'} borderWidth={'2px'} borderRadius={'md'}>
+      <Box
+        borderColor={'#222'}
+        borderWidth={'4px'}
+        borderRadius={'md'}
+        borderTopRadius={0}>
         <div
           style={{
             position: 'relative',

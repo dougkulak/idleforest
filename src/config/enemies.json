@@ -1,28 +1,28 @@
 [
   {
     "level": 1,
-    "name": "cute rabbit",
+    "name": "A little rabbit",
     "hp": 30,
     "dmg": "2d2",
     "ascii": "rabbit.txt"
   },
   {
     "level": 1,
-    "name": "small frog",
+    "name": "A small frog",
     "hp": 30,
     "dmg": "2d2",
     "ascii": "frog.txt"
   },
   {
     "level": 1,
-    "name": "tiny turtle",
+    "name": "A tiny turtle",
     "hp": 35,
     "dmg": "1d4",
     "ascii": "turtle.txt"
   },
   {
     "level": 2,
-    "name": "spooked spider",
+    "name": "A spooked spider",
     "hp": 50,
     "dmg": "3d2",
     "ascii": "spider.txt"
